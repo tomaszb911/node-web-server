@@ -59,6 +59,20 @@ app.get('/bad', (req, res) => {
     })
 });
 
+app.get('/map', (req, res) => {
+    res.render('map.hbs', {
+        coordinate: [
+            {coords: '42.510340, 1.5367663', label: 'A'},
+            {coords: '42.510059, 1.5355217', label: 'B'},
+            {coords: '42.510035, 1.5330917', label: 'C'},
+            {coords: '42.509652, 1.5342450', label: 'D'},
+            {coords: '42.509759, 1.5381289', label: 'E'},
+            {coords: '42.510538, 1.5371364', label: 'F'}
+            ],
+        coordinate2: '42.520340, 1.5467663'
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
