@@ -22,27 +22,8 @@
         // var myMap = L.map('map').setView([51.73, -1.28], 5);
 
         var coolPlaces = new L.LayerGroup();
-        <!--var locationToStringed = parseFloat({{coordinate}});-->
-        <!--var lat = parseFloat(locationToStringed[0]);-->
-        <!--var lng = parseFloat(locationToStringed[1]);-->
-            {{#each pois}}
-                console.log{{coords}}
-                L.marker([{{coords}}]).bindPopup(`{{label}}`).addTo(coolPlaces);
-            {{/each}}
-            {{!-- {{#each coordinate}}
-                L.marker([{{coords}}]).bindPopup(`{{label}}`).addTo(coolPlaces);
-            {{/each}} --}}
 
 
-
-            {{#each coordinate2}}
-                L.marker([{{coords}}]).bindPopup(`{{label}}`).addTo(coolPlaces);
-            {{/each}}
-            {{#each coordinate3}}
-                L.marker([{{coords}}]).bindPopup(`{{label}}`).addTo(coolPlaces);
-            {{/each}}
-        <!--L.marker([{{coordinate}}]).bindPopup('A').addTo(coolPlaces);-->
-        <!--L.marker([{{coordinate2}}]).bindPopup('2').addTo(coolPlaces);-->
 
         // L.marker([42.510059, 1.5355217]).bindPopup('B').addTo(coolPlaces);
         // L.marker([42.510035, 1.5330917]).bindPopup('C').addTo(coolPlaces);
@@ -81,13 +62,6 @@
         .setStyle({color: 'black'})
         .addTo(coolPlaces);
 
-                L.polyline([
-                
-      
-
-        ])
-        .setStyle({color: 'black'})
-        .addTo(coolPlaces);
 
         var ttMap = L.tileLayer(
                 'https://{s}.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=EhMQIGSI8EE41do0KNiXKGaPjegSIg6V'

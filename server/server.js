@@ -40,18 +40,20 @@ app.use((req, res, next) => {
 app.use(express.static(__dirname + '/public'));
 
 hbs.registerHelper('getCurrentYear', () => {
-    return new Date().getFullYear();
+    var date = new Date().getFullYear();
+    return date;
 });
 
 hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 });
 
-hbs.registerHelper('getPois', ()=>{
+hbs.registerHelper('dejPoj', ()=>{
     Poi.find().then((pois)=>{
+        console.log('pois: ',{pois});
        return {pois};
     }, (e)=>{
-        res.status(400).send(e);
+        console.log('Sth is no yes',e);
     });
 });
 
