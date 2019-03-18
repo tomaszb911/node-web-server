@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 import Map from './components/LeafletMap.vue'
 
 export default {
