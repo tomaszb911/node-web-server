@@ -1,3 +1,4 @@
+// app.vue
 <template>
     <div style="height: 100%">
   <v-map :zoom=13 :center="[47.413220, -1.219482]">
@@ -44,19 +45,32 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+
+
+<style>
+#app,
+#mymap {
+  position: relative;
+  padding: 0;
+  width: 600px;
+  height: 600px;
 }
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
